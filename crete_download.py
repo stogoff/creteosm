@@ -19,7 +19,7 @@ for way in rel:
             if node.tag == 'nd':
                 cnt += 1
                 if cnt % 100 == 0:
-                    print(f"{cnt} points {(time.time() - t0)*10:d} ms per point")
+                    print(f"{cnt} points {(time.time() - t0)*10:.0f} ms per point")
                     t0 = time.time()
                 refnode = node.attrib['ref']
                 url = "https://www.openstreetmap.org/api/0.6/node/{}".format(refnode)
